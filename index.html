@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@700&family=Inter&family=Josefin+Sans:wght@400;700&family=League+Spartan:wght@700&family=Open+Sans:wght@300;600&family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./main.css">
+  <title>Library</title>
+</head>
+<body>
+
+  
+  <div class="background">
+    <video class="vido" autoplay muted loop>
+      <source src="./img/video.mp4">
+    </video>
+  </div>
+
+
+  <section class="header">
+    <div class="container">
+      <div class="navbar">
+        <h1 class="navbar__heading">Library</h1>
+        <button class="login-btn">Log in</button>
+      </div>
+    </div>
+  </section>
+
+  <section>
+     <!-- login page -->
+     <div class="form-box hide">
+       <div class="title">
+         <h3>Sign Up</h3>
+         <button class="close-btn">x</button>
+       </div>
+      <form>
+
+        <div class="form-group">
+          <input class="form-input"  type="text" id="username" name="username" placeholder="Enter your username">
+        </div>
+        <div class="form-group">
+          <input class="form-input" type="password" id="password" name="password" placeholder="Enter your password">
+        </div>
+        <button class="form-btn" type="submit">Login</button>
+      </form>
+    </div>
+
+    <div>
+      <button class="add-btn">
+        + 
+      </button>
+    </div>
+  </section>
+
+  <!-- js -->
+  <script src="./js/main.js"></script>
+</body>
+</html>

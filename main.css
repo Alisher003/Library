@@ -1,0 +1,161 @@
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  scroll-behavior: smooth;
+}
+
+
+body {
+  font-family: 'Roboto', 'Arial', sans-serif;
+  height: 100%;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 1340px;
+  height: auto;
+  margin: 0;
+  padding: 0 100px;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.vido {
+  width: 100%;
+}
+
+.header {
+  background-color: #ffffff;
+  opacity: 0.3;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.navbar__heading {
+  font-family: 'League Spartan';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  color: #333;
+  padding: 0;
+  margin: 0;
+}
+
+.login-btn {
+  font-family: 'League Spartan';
+  font-style: normal;
+  font-weight: 200;
+  font-size: 18px;
+  padding: 10px 25px;
+  border-radius: 15px;
+  border: 1px solid #333;
+  transition: 0.3s;
+  color: #333;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  opacity: 0.8;
+}
+
+.login-btn:active {
+  opacity: 0.8; 
+  background-color: #333;
+}
+
+/* login page */
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.form-box {
+  padding: 40px;
+  width: 500px;
+  height: auto;
+  background-color: #ffff;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-btn {
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.close-btn:hover {
+  opacity: 0.8;
+  background-color: #333;
+  color: #ffffff;
+}
+
+.close-btn:active {
+  opacity: 0.6;
+  background-color: #333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+
+.form-input {
+  padding: 10px;
+  border: none;
+  width: 100%;
+  margin: 20px 0;
+  border-radius: 5px;
+  background-color: #EAEAEA;
+  font-size: 16px;
+}
+
+.form-btn {
+  padding: 10px;
+  border: none;
+  margin: 20px 0;
+  border-radius: 5px;
+  background-color: #007BFF;
+  color: #FFF;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.form-btn:hover {
+  background-color: #0069D9;
+}
