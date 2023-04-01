@@ -216,4 +216,12 @@ form {
   padding: 15px;
   border-radius: 15px;
   background-color: #ffffff;
+  opacity: 0.6;
+}
+
+.book-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
