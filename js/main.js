@@ -53,7 +53,7 @@ elForm.addEventListener("submit", (event) => {
     author: elAuthorInput.value,
     pages: elPagesInput.value,
     date: eldateInput.value,
-    id: Books[Books.length -1]?.id || 0,
+    id: Books[Books.length - 1]?.id + 1 || 0,
     status: elModalSelect.value
   };
 
@@ -88,7 +88,7 @@ function render(arr , list) {
       elBookItemAuther.textContent = book.author
       elBookItemPage.textContent = book.pages
       elBookItemDate.textContent = book.date
-      elBookItemDalete.dataset.id = book.bookId
+      elBookItemDalete.dataset.bookId = book.id
       elBookItemCheck.textContent = book.status
 
       fragment.appendChild(elTemplateCopy);
@@ -98,3 +98,19 @@ function render(arr , list) {
 
 }
 
+
+elBookList.addEventListener("click" , (evt) => {
+  evt.preventDefault()
+  if(evt.target.matches(".book-item__dalete")){
+    const index = Books.findIndex((book) => book.id == evt.target.dataset.bookId)
+    Books.splice(index,1)
+    for(let i = index; i<Books.length; i++){
+      Books[i].id--
+    }
+    localStorage.setItem("books", JSON.stringify(Books));
+    render(Books, elBookList)
+  }
+})
+
+
+render(Books, elBookList)
