@@ -1,10 +1,5 @@
 "use strick";
 
-let elLoginBtn = document.querySelector(".login-btn");
-let elFormBox = document.querySelector(".form-box");
-let elCloseBtn = document.querySelector(".close-btn");
-let elAddBtn = document.querySelector(".add-btn");
-let elModal = document.querySelector(".modal");
 let elTemplate = document.querySelector("#book-tem").content;
 let elBookList = document.querySelector(".book-list");
 let elModalSelect = document.querySelector("#modal-select");
@@ -14,20 +9,6 @@ let elAuthorInput = document.querySelector(".modal-auther");
 let elPagesInput = document.querySelector(".modal-pages");
 let eldateInput = document.querySelector(".modal-date");
 
-// Login
-elLoginBtn.addEventListener("click", () => {
-  elFormBox.classList.replace("hide", "show");
-});
-
-elCloseBtn.addEventListener("click", () => {
-  elFormBox.classList.replace("show", "hide");
-});
-
-// form
-elAddBtn.addEventListener("click", () => {
-  elAddBtn.style.display = "none";
-  elModal.classList.toggle("show");
-});
 
 const storedBooks = localStorage.getItem("books");
 const Books = storedBooks ? JSON.parse(storedBooks) : [];

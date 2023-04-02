@@ -10,68 +10,24 @@
       href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@700&family=Inter&family=Josefin+Sans:wght@400;700&family=League+Spartan:wght@700&family=Open+Sans:wght@300;600&family=Roboto:ital,wght@1,300&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="./main.css" />
     <title>Library</title>
   </head>
   <body>
-    <div class="background">
-      <video class="vido" autoplay muted loop>
-        <source src="./img/video.mp4" />
-      </video>
-    </div>
-
-    <section class="header">
-      <div class="container">
-        <div class="navbar">
-          <h1 class="navbar__heading">Library</h1>
-          <button class="login-btn">Log in</button>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <!-- login page -->
-      <div class="form-box hide">
-        <div class="title">
-          <h3>Login</h3>
-          <button class="close-btn">x</button>
-        </div>
-        <form>
-          <div class="form-group">
-            <input 
-              required
-              class="form-input"
-              type="text"
-              id="username"
-              name="username"
-              placeholder="Enter your username"
-            />
-          </div>
-          <div class="form-group">
-            <input
-              required
-              class="form-input"
-              type="password"
-              id="password"
-              name="password"
-              placeholder="Enter your password"
-            />
-          </div>
-          <button class="form-btn" type="submit">Login</button>
-        </form>
-      </div>
-
-      <div class="container">
-        <button class="add-btn">+</button>
-
-        <div class="modal ">
+        <div class="container ">
           <form class="moda-form">
             <label>Title</label>
-            <input required class="modal-title" type="text" />
+            <input required class="modal-title" type="text" placeholder="Title" />
             <label>Auther</label>
-            <input required class="modal-auther" type="text"/>
+            <input required class="modal-auther" type="text" placeholder="Auther"/>
             <label>Pages</label>
-            <input required class="modal-pages" type="number" />
+            <input required class="modal-pages" type="number" placeholder="Pages"/>
             <label>Date</label>
             <input required class="modal-date" type="date" value="212121" />
             <select id="modal-select" for="checkbox">
@@ -82,7 +38,24 @@
           </form>
         </div>
         
-        <ul class="book-list"></ul>
+        <div class="container">
+          <table class="table table-striped mt-5">
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Pages</th>
+                <th>Date</th>
+                <th>ISBN#</th>
+                <th></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="book-list"></tbody>
+          </table>
+          
+          <ul class="book-list"></ul>
+        </div>
 
         <template id="book-tem">
           <li class="book-item">
@@ -94,9 +67,10 @@
            <button class="book-item__check">red</button>
           </li>
         </template>
-
       </div>
     </section>
+
+    <br>
 
     <!-- js -->
     <script src="./js/main.js"></script>
